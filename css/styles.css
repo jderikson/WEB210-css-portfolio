@@ -53,6 +53,7 @@ h1, h2 {
     font-family: 'Kaushan Script', cursive;
     font-weight: 400;
     margin: 0;
+    text-shadow: 2px 2px 5px #463f3a;
 }
 
 h3 {
@@ -111,15 +112,22 @@ header {
 
 .projects .btn:hover {
     background: rgba(85, 91, 110, 80%);
+    
 }
 
 .project-item {
     overflow: hidden;
 }
 
+.project-item a:hover {
+    box-shadow: 10px 10px 5px grey;
+
+}
+
 .project-item h3 {
     margin-top: 0;
 }
+
 
 /* Work Experience
 --------------------------- */
