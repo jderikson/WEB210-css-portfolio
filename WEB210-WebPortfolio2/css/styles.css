@@ -1,0 +1,307 @@
+/*--------------------------------------------------------------
+   Color Palette
+
+antique-brass: #cb997eff;
+champagne-pink: #eddcd2ff;
+linen: #fff1e6ff;
+isabelline: #f0efebff;
+desert-sand: #ddbea9ff;
+artichoke: #a5a58dff;
+ash-gray: #b7b7a4ff;
+
+--------------------------------------------------------------*/
+:root {
+    --ming: hsla(185, 100%, 47%, 1);
+    --middle-blue-green: hsla(174, 34%, 77%, 1);
+    --alice-blue: hsla(195, 5%, 98%, 1);
+    --unbleached-silk: hsla(15, 18%, 100%, 1);
+    --dark-salmon: hsla(16, 47%, 89%, 1);
+}
+
+/*--------------------------------------------------------------
+   Fonts
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-ExtraLight';
+    src: url('../fonts/Montserrat-ExtraLight.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Bad-Script';
+    src: url('../fonts/BadScript-Regular.ttf') format('truetype');
+  }
+
+/*--------------------------------------------------------------
+   Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+    Images
+--------------------------------------------------------------*/
+ img {
+	border: 0;
+	width: 100%;
+	height: auto;
+} 
+
+/*--------------------------------------------------------------
+Header:
+--------------------------------------------------------------*/
+
+.masthead  {
+	text-align: center;
+}
+
+ .logo {
+	min-width: 0;
+	max-width: 250px;
+} 
+/*--------------------------------------------------------------
+    Navigation
+--------------------------------------------------------------*/
+
+.main-nav {
+	padding: 3em;
+	font-size: 1.1em;
+}
+
+.main-nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ .main-nav a {
+	padding: .4em 1em;
+	text-decoration: none;
+	font-family: 'Bad-Script';
+	color: #cb997eff;
+	font-size: 1.2em;
+
+}
+
+.main-nav a:focus,
+.main-nav a:hover {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+    Splash area
+--------------------------------------------------------------*/
+
+.splash {
+	color: #fff1e6ff;
+	padding: 8%;
+	background-color: #a5a58dff;
+	position: relative;
+	right: -1.5em;}
+
+.splash > h1 {
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Bad-Script';
+	font-weight: normal;
+	padding-bottom: 5%;
+}
+
+.splash > h2 {
+	text-align: right;
+	font-family: 'Montserrat-ExtraLight';
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.splash-photo > img {
+
+	min-width: 0;
+	max-width: 500px;
+}
+
+.bg-stripe {
+	background-color: #ffddd2ff;
+	z-index: -9999;
+}
+
+/*--------------------------------------------------------------
+    Get Connected
+--------------------------------------------------------------*/
+.get-connected {
+	background-color: #cb997eff;
+	
+}
+
+.get-connected h1 {
+	font-family: 'Bad-Script';
+	text-align: center;
+	color:  #fff1e6ff;
+	font-weight: normal;
+}
+.get-connected  ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 1em;
+	list-style-type: none;
+}
+
+.get-connected a {
+	color: #fff1e6ff;
+	padding: 1em;
+	font-size: 2em;
+}
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 27em) {
+
+		.site {
+			display: grid;
+			grid-template-columns: 15em 2fr 3fr 1fr;
+			grid-template-rows: 15em 5em 5em 30em 5em 10em; /* 4fr 4fr 4fr; */
+			grid-template-areas:
+				"header . nav nav"
+				". .  splash-photo ."
+				". . splash-photo ."
+				". splash splash-photo ."
+				". . splash-photo ."
+			/*"bio bio bio bio"
+                "cards cards cards cards" */
+                "get-connected get-connected get-connected get-connected"; 
+		}
+
+		.masthead {
+			grid-area: header;
+		}
+		
+		.masthead > img {
+			object-fit: contain;
+		}
+        
+        .main-nav {
+			grid-area: nav;
+			display: grid;
+			align-items: end;
+		}
+
+		.splash {
+			grid-area: splash;
+		}
+
+		.splash-photo {
+			grid-area: splash-photo;
+		}
+
+		.splash-photo > img {
+		}
+
+		.bg-stripe {
+			grid-area: bg-stripe;
+		}
+
+		.get-connected {
+			grid-area: get-connected;
+		}
+
+/*		.cards {
+			margin: 0 auto;
+			padding: 1em;
+		}
+
+		.card {
+			margin: 1em 0;
+			padding: .5em;
+			display: grid;
+			grid-template-columns: 8em auto;
+		}
+
+		.cards a:focus,
+		.cards a:hover {
+			outline: 1px solid hsl(0, 0%, 80%);
+		}
+*/
+
+	}
+}
+
+	/*
+	@media screen and (min-width: 60em) {
+
+		.cards {
+			max-width: none;
+			margin: 1em 0;
+			display: grid;
+			grid-template-columns: repeat(2, 25em);
+			grid-gap: 1em;
+			justify-content: center;
+		}
+
+		.card {
+			margin: 0;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .card {
+			display: block;
+		}
+
+	}
+
+	@media screen and (min-width: 78em) {
+
+		.site {
+			grid-template-columns: 15em calc(100% - 16em) 15em;
+			grid-template-areas:
+				"nav header header"
+				"nav main sidebar"
+				"nav footer footer";
+		}
+	}
+
+}
+       /* <img src="images/julie-headshot.jpg" alt="Julie Erikson"> */
+*/

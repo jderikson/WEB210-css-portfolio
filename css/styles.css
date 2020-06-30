@@ -84,6 +84,57 @@ h3 {
     padding: 60px 0;
 }
 
+/* Nav Menu
+---------------------------*/
+.nav {
+    color: #faf9f9ff;
+    font-size: 16px;
+    margin: 0;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background:  #89b0aeff;
+    color: #343434;
+}
+
+ul li:hover ul {
+    left: 0;
+    display: block;
+    margin-top: -8px;
+}
+
+ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px; 
+    left: -10000px;
+    width: 150px;
+}
+
+ul li ul li {
+    background: #bee3dbff;
+    display: block;
+    text-align: left;
+}
+
+ul li ul li:hover {
+    background: #89b0aeff;
+}
+
+
 /* Profile
 --------------------------- */
 header {
@@ -94,11 +145,11 @@ header {
 /* Projects
 --------------------------- */
 .projects {
-    background: #89b0aeff;
+    background: #ffd6baff;  
 }
 
 .projects a {
-    color: #bee3dbff;
+    color: #555b6eff;
 }
 
 .projects .btn {
@@ -132,7 +183,28 @@ header {
 /* Work Experience
 --------------------------- */
 .work-experience {
-    background: #bee3dbff;
+    background: #89b0aeff;
+}
+
+.job-details p {
+    padding: 0;
+    margin-bottom: 8px;
+
+}
+
+.job-summary {
+    text-align: left;
+}
+
+.job-summary ul {
+    text-align: left;
+}
+
+.job-summary li {
+    margin: 3px 5px;
+    list-style-type: disc;
+    text-align: left;
+    padding: 0px 5px;
 }
 
 /* Education
