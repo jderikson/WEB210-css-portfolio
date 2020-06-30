@@ -10,13 +10,6 @@ artichoke: #a5a58dff;
 ash-gray: #b7b7a4ff;
 
 --------------------------------------------------------------*/
-:root {
-    --ming: hsla(185, 100%, 47%, 1);
-    --middle-blue-green: hsla(174, 34%, 77%, 1);
-    --alice-blue: hsla(195, 5%, 98%, 1);
-    --unbleached-silk: hsla(15, 18%, 100%, 1);
-    --dark-salmon: hsla(16, 47%, 89%, 1);
-}
 
 /*--------------------------------------------------------------
    Fonts
@@ -244,64 +237,7 @@ CSS Grid layout for wider screens, when browser supports grid:
 			grid-area: get-connected;
 		}
 
-/*		.cards {
-			margin: 0 auto;
-			padding: 1em;
-		}
-
-		.card {
-			margin: 1em 0;
-			padding: .5em;
-			display: grid;
-			grid-template-columns: 8em auto;
-		}
-
-		.cards a:focus,
-		.cards a:hover {
-			outline: 1px solid hsl(0, 0%, 80%);
-		}
-*/
 
 	}
 }
 
-	/*
-	@media screen and (min-width: 60em) {
-
-		.cards {
-			max-width: none;
-			margin: 1em 0;
-			display: grid;
-			grid-template-columns: repeat(2, 25em);
-			grid-gap: 1em;
-			justify-content: center;
-		}
-
-		.card {
-			margin: 0;
-		}
-
-		.double {
-			grid-row: span 3;
-		}
-
-		.double .card {
-			display: block;
-		}
-
-	}
-
-	@media screen and (min-width: 78em) {
-
-		.site {
-			grid-template-columns: 15em calc(100% - 16em) 15em;
-			grid-template-areas:
-				"nav header header"
-				"nav main sidebar"
-				"nav footer footer";
-		}
-	}
-
-}
-       /* <img src="images/julie-headshot.jpg" alt="Julie Erikson"> */
-*/
